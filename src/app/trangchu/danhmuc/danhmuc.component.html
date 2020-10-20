@@ -17,7 +17,6 @@
                     <h5>Filter Listings</h5>
                     <div class="side-cat2">
                         <form>
-
                             <select class="categorie">
                                 <option>Categories</option>
                                 <option>Restaurants</option>
@@ -117,14 +116,9 @@
             <div class="col-md-8 dir-search dir-search-list">
                 <div class="search-filter">
                     <ul>
-                        <li><a href="#">Featured</a>
+                        <li><b><a href="#">Danh mục việc làm</a></b>
                         </li>
-                        <li><a href="#">Popular</a>
-                        </li>
-                        <li><a href="#">Best rated</a>
-                        </li>
-                        <li><a href="#">Most recent</a>
-                        </li>
+                        
                         <li>
                             <a href="directory_search.html">
                                 <img src="assets/images/icons/grid.png" alt="" />
@@ -137,10 +131,10 @@
                         </li>
                     </ul>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
+                <div class="row" *ngIf="list">
+                    <div class="col-md-12" *ngFor="let item of list">
                         <div class="listing space30">
-                            <div class="listing-img bg-image" data-image-src="assets/images/list/2/1.jpg">
+                            <div class="listing-img bg-image" style="background: url('assets/images/{{item.anh}}') center center / cover no-repeat;">
 
                                 <div class="li-overlay">
                                     <div class="li-overlay-inner">
@@ -151,134 +145,13 @@
                                 </div>
                             </div>
                             <div class="listing-info">
-                                <h4 class="li-name"><a href="#">Relae Caffe, Copenhagen, <br>Denmark</a></h4>
-                                <p class="li-category">Caffe,restaurant</p>
-                                <p class="li-location">73 Sarajevska,Zagreb Croatia</p>
+                                <h4 class="li-name"><a href="#">{{item.tenCv}}</a></h4>
+                                <p class="li-category">{{item.tencongty}}</p>
+                                <p class="li-location">{{item.diachi}}</p>
                             </div>
                             <div class="list-ratings-wrap">
-                                <div class="list-ratings2">4.9</div>
-                                <p>143 ratings</p>
-                                <a href="#">Message</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="listing space30">
-                            <div class="listing-img bg-image" data-image-src="assets/images/list/2/2.jpg">
-
-                                <div class="li-overlay">
-                                    <div class="li-overlay-inner">
-                                        <a href="#" class="mail"></a>
-                                        <a href="#" class="menu"></a>
-                                        <a href="#" class="link"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="listing-info">
-                                <h4 class="li-name"><a href="#">Marrakech Magic Theater, <br>Croatia</a></h4>
-                                <p class="li-category">Caffe,Bakeries</p>
-                                <p class="li-location">73 Sarajevska,Zagreb Croatia</p>
-                            </div>
-                            <div class="list-ratings-wrap">
-                                <div class="list-ratings2">4.6</div>
-                                <p>28 ratings</p>
-                                <a href="#">Message</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="listing space30">
-                            <div class="listing-img bg-image" data-image-src="assets/images/list/2/3.jpg">
-
-                                <div class="li-overlay">
-                                    <div class="li-overlay-inner">
-                                        <a href="#" class="mail"></a>
-                                        <a href="#" class="menu"></a>
-                                        <a href="#" class="link"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="listing-info">
-                                <h4 class="li-name"><a href="#">Tadu Ethiopian Kitchen and <br>late night caffe</a></h4>
-                                <p class="li-category">Caffe,restaurant</p>
-                                <p class="li-location">73 Sarajevska,Zagreb Croatia</p>
-                            </div>
-                            <div class="list-ratings-wrap">
-                                <div class="list-ratings2">5.0</div>
-                                <p>12 ratings</p>
-                                <a href="#">Message</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="listing space30">
-                            <div class="listing-img bg-image" data-image-src="assets/images/list/2/4.jpg">
-
-                                <div class="li-overlay">
-                                    <div class="li-overlay-inner">
-                                        <a href="#" class="mail"></a>
-                                        <a href="#" class="menu"></a>
-                                        <a href="#" class="link"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="listing-info">
-                                <h4 class="li-name"><a href="#">Michael Bruno Luggage & <br>outlet store</a></h4>
-                                <p class="li-category">Caffe,restaurant</p>
-                                <p class="li-location">73 Sarajevska,Zagreb Croatia</p>
-                            </div>
-                            <div class="list-ratings-wrap">
-                                <div class="list-ratings2">5.0</div>
-                                <p>12 ratings</p>
-                                <a href="#">Message</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="listing space30">
-                            <div class="listing-img bg-image" data-image-src="assets/images/list/2/5.jpg">
-
-                                <div class="li-overlay">
-                                    <div class="li-overlay-inner">
-                                        <a href="#" class="mail"></a>
-                                        <a href="#" class="menu"></a>
-                                        <a href="#" class="link"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="listing-info">
-                                <h4 class="li-name"><a href="#">Captain Kirk's San Francisco <br>Sailing</a></h4>
-                                <p class="li-category">Caffe,restaurant</p>
-                                <p class="li-location">73 Sarajevska,Zagreb Croatia</p>
-                            </div>
-                            <div class="list-ratings-wrap">
-                                <div class="list-ratings2">5.0</div>
-                                <p>12 ratings</p>
-                                <a href="#">Message</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="listing space30">
-                            <div class="listing-img bg-image" data-image-src="assets/images/list/2/6.jpg">
-
-                                <div class="li-overlay">
-                                    <div class="li-overlay-inner">
-                                        <a href="#" class="mail"></a>
-                                        <a href="#" class="menu"></a>
-                                        <a href="#" class="link"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="listing-info">
-                                <h4 class="li-name"><a href="#">San Francisco Fishing Charter <br>relax</a></h4>
-                                <p class="li-category">Caffe,restaurant</p>
-                                <p class="li-location">73 Sarajevska,Zagreb Croatia</p>
-                            </div>
-                            <div class="list-ratings-wrap">
-                                <div class="list-ratings2">5.0</div>
-                                <p>12 ratings</p>
-                                <a href="#">Message</a>
+                                <div class="list-ratings2">{{item.luotxem}}</div>
+                                <p>{{item.mucluong}}</p>
                             </div>
                         </div>
                     </div>

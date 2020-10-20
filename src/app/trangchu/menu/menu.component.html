@@ -4,210 +4,283 @@
             <h2>Một tìm kiếm, Triệu việc làm</h2>
             <p class="lead">Thành công lớn nhất của con người là tìm được công việc yêu thích,đam mê</p>
         </div>
-        <form class="intro-search" action="directory_search_list.html">
-            <input type="text" placeholder="Nhập tên việc làm, vị trí... ">
+        <form class="intro-search" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <input type="text" placeholder="Nhập tên việc làm, vị trí... " formControlName="key_name">
+            <select formControlName="type">
+                <option *ngFor="let item of loaicvs" value="{{item.maloaiCv}}">{{item.tenloaiCv}}</option>
+            </select>
             <button type="submit">Tìm kiếm <img src="assets/images/icons/search.png" alt="" /> </button>
         </form>
     </div>
 </div>
  <!-- end: Intro search section -->
         <!-- start: Featured entries carousel -->
-        <div class="category-carousel">
-            <div class="container-fluid no-padding">
-                <div class="section-head text-center">
-                    <h3>What are you interested in?</h3>
-                    <p class="lead">See what <span class="highlight">people searching</span> for, all around the world.</p>
-                </div>
-                <div class="cc-slider">
-                    <div id="cc-slider">
-                        <div class="cc-card">
-                            <div class="cat-listing listing-sm bg-image" data-image-src="images/list/2.jpg">
-                                <div class="overlay"></div> <span class="cc-item-info"></span>
-                                <div class="cc-info"> <a href="#" class="cc-btn">Browse</a>
-                                    <div class="col-md-9"> <span class="star-ratings">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 </span>
-                                        <h4>Fitness</h4>
-                                        <p>12511 Listings</p>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                </div>
-                            </div>
-                            <div class="cat-listing listing-sm bg-image" data-image-src="images/list/3.jpg">
-                                <div class="overlay"></div> <img src="assets/images/list/3.jpg" class="img-responsive" alt="" /> <span class="cc-item-info"></span>
-                                <div class="cc-info"> <a href="#" class="cc-btn">Browse</a>
-                                    <div class="col-md-9"> <span class="star-ratings">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 </span>
-                                        <h4>Movies</h4>
-                                        <p>Movie Theater Listings</p>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end: cc-card item -->
-                        <div class="cc-card">
-                            <div class="cat-listing listing-lg bg-image" data-image-src="images/list/12.jpg">
-                                <div class="overlay"></div> <span class="cc-item-info"></span>
-                                <div class="cc-info"> <a href="#" class="cc-btn">Browse</a>
-                                    <div class="col-md-9"> <span class="star-ratings">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 </span>
-                                        <h4>Bakery</h4>
-                                        <p>Book your table</p>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end: cc-card item -->
-                        <div class="cc-card">
-                            <div class="cat-listing listing-lg bg-image" data-image-src="images/list/4.jpg">
-                                <div class="overlay"></div> <span class="cc-item-info"></span>
-                                <div class="cc-info"> <a href="#" class="cc-btn">Browse</a>
-                                    <div class="col-md-9"> <span class="star-ratings">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 </span>
-                                        <h4>Events</h4>
-                                        <p>Find activities near you</p>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end: cc-card item -->
-                        <div class="cc-card">
-                            <div class="cat-listing listing-lg bg-image" data-image-src="assets/images/list/9.jpg">
-                                <div class="overlay"></div> <span class="cc-item-info"></span>
-                                <div class="cc-info"> <a href="#" class="cc-btn">Browse</a>
-                                    <div class="col-md-9"> <span class="star-ratings">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 </span>
-                                        <h4>Bakery</h4>
-                                        <p>Book your table</p>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end: cc-card item -->
-                        <div class="cc-card">
-                            <div class="cat-listing listing-lg bg-image" data-image-src="assets/images/list/12.jpg">
-                                <div class="overlay"></div> <span class="cc-item-info"></span>
-                                <div class="cc-info"> <a href="#" class="cc-btn">Browse</a>
-                                    <div class="col-md-9"> <span class="star-ratings">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 </span>
-                                        <h4>Bakery</h4>
-                                        <p>Book your table</p>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end: cc-card item -->
-                        <div class="cc-card">
-                            <div class="cat-listing listing-sm bg-image" data-image-src="assets/images/list/2.jpg">
-                                <div class="overlay"></div> <span class="cc-item-info"></span>
-                                <div class="cc-info"> <a href="#" class="cc-btn">Browse</a>
-                                    <div class="col-md-9"> <span class="star-ratings">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 </span>
-                                        <h4>Fitness</h4>
-                                        <p>12511 Listings</p>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                </div>
-                            </div>
-                            <div class="cat-listing listing-sm bg-image" data-image-src="assets/images/list/3.jpg">
-                                <div class="overlay"></div> <span class="cc-item-info"></span>
-                                <div class="cc-info"> <a href="#" class="cc-btn">Browse</a>
-                                    <div class="col-md-9"> <span class="star-ratings">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 </span>
-                                        <h4>Movies</h4>
-                                        <p>Movie Theater Listings</p>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end: cc-card item -->
-                        <div class="cc-card">
-                            <div class="cat-listing listing-lg bg-image" data-image-src="assets/images/list/8.jpg">
-                                <div class="overlay"></div> <span class="cc-item-info"></span>
-                                <div class="cc-info"> <a href="#" class="cc-btn">See Offers</a>
-                                    <div class="col-md-9"> <span class="star-ratings">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 </span>
-                                        <h4>Restuarants</h4>
-                                        <p>Book your table</p>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end: cc-card item -->
-                        <div class="cc-card">
-                            <div class="cat-listing listing-lg bg-image" data-image-src="assets/images/list/7.jpg">
-                                <div class="overlay"></div> <span class="cc-item-info"></span>
-                                <div class="cc-info"> <a href="#" class="cc-btn">Browse</a>
-                                    <div class="col-md-9"> <span class="star-ratings">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 </span>
-                                        <h4>Events</h4>
-                                        <p>Book table</p>
-                                    </div>
-                                    <div class="col-md-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end: cc-card item -->
+    <div class="wrapper">  
+        <div class="content-wrapper">
+
+            <!-- BEGIN .composs-main-content -->
+            <div class="composs-main-content composs-main-content-s-1">
+
+                <!-- BEGIN .composs-panel -->
+                <div class="composs-panel">
+
+                    <div class="composs-panel-title composs-panel-title-tabbed">
+                        <strong class="active">Todays hottest articles</strong>
                     </div>
+
+                    <div class="composs-panel-inner">
+                        <div class="composs-panel-tab active">
+                            <div class="composs-article-split-block">
+                                <div class="item-small">
+                                    <div class="item" *ngFor="let item of loaicvtype1">
+                                        <div class="item-header">
+                                            <a href="#" class="img-read-later-button rm-btn-small">Read later</a>
+                                            <a href="post.html"><img src="assets/images/{{item.anh}}" alt=""/></a>
+                                        </div>
+                                        <div class="item-content">
+                                            <h2><a href="post.html">{{item.tenCv}}</a></h2>
+                                            <span class="item-meta">
+                                                    <span class="item-meta-item"><i class="material-icons">access_time</i>{{item.ngaydang}}</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- END .composs-panel -->
                 </div>
+
+                <!-- BEGIN .composs-panel -->
+                <div class="composs-panel">
+
+                    <div class="composs-panel-title composs-panel-title-tabbed">
+                        <strong class="active">Latest reviews</strong>
+                    </div>
+
+                    <div class="composs-panel-inner">
+                        <div class="composs-panel-tab active">
+
+                            <div class="composs-article-list lets-do-3 lets-do-slider">
+
+                                <div class="item" *ngFor="let item of loaicvtype2">
+                                    <div class="item-header">
+                                        <a href="#" class="img-read-later-button">Read later</a>
+                                        <a href="post.html"><img src="assets/images/{{item.anh}}" alt="" /></a>
+                                    </div>
+                                    <div class="item-content">
+                                        <h2><a href="post.html">{{item.tenCv}}</a></h2>
+                                        <span class="item-meta">
+                                                <span class="item-meta-item"><i class="material-icons">access_time</i>{{item.ngaydang}}</span>
+                                        <a href="post.html#comments" class="item-meta-item"><i class="material-icons">chat_bubble_outline</i>35</a>
+                                        </span>
+                                        <span class="item-stars"><span class="stars-inner" data-ot-css="width: 80%;"></span></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- END .composs-panel -->
+                </div>
+
+                <!-- BEGIN .composs-panel -->
+                <div class="composs-panel">
+
+                    <div class="composs-panel-title">
+                        <strong>Most recent articles</strong>
+                    </div>
+
+                    <div class="composs-panel-inner">
+
+                        <div class="composs-blog-list lets-do-1">
+
+                            <div class="item" *ngFor="let item of loaicvtype3">
+                                <div class="item-header">
+                                    <a href="#" class="img-read-later-button">Read later</a>
+                                    <a href="post.html"><img src="assets/images/{{item.anh}}" alt="" /></a>
+                                </div>
+                                <div class="item-content">
+                                    <h2><a href="post.html">{{item.tenCv}}</a></h2>
+                                    <span class="item-meta">
+                                            <span class="item-meta-item"><i class="material-icons">access_time</i>{{item.ngaydang}}</span>
+                                    <a href="post.html#comments" class="item-meta-item"><i class="material-icons">chat_bubble_outline</i>35</a>
+                                    </span>
+                                    <p>{{item.motaCv}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- END .composs-panel -->
+                </div>
+
+                <!-- END .composs-main-content -->
             </div>
+
+            <!-- BEGIN #sidebar -->
+            <aside id="sidebar">
+                <!-- BEGIN .widget -->
+                <div class="widget">
+                    <h3>Socialize</h3>
+                    <div class="widget-content ot-w-socialize">
+                        <a href="#" class="ot-color-hover-facebook"><i class="fa fa-facebook"></i><span><i>13 956</i> fans</span></a>
+                        <a href="#" class="ot-color-hover-twitter"><i class="fa fa-twitter"></i><span><i>2 042</i> followers</span></a>
+                        <a href="#" class="ot-color-hover-google-plus"><i class="fa fa-google-plus"></i><span><i>184</i> followers</span></a>
+                        <a href="#" class="ot-color-hover-youtube"><i class="fa fa-youtube-play"></i><span><i>502</i> subscribers</span></a>
+                        <a href="#" class="ot-color-hover-rss"><i class="fa fa-rss"></i><span><i>2 831</i> rss feeders</span></a>
+                    </div>
+                    <!-- END .widget -->
+                </div>
+
+                <!-- BEGIN .widget -->
+                <div class="widget">
+                    <div class="widget-content">
+                        <a href="#" target="_blank"><img src="assets/images/o2.jpg" alt="" /></a>
+                    </div>
+                    <!-- END .widget -->
+                </div>
+
+                <!-- BEGIN .widget -->
+                <div class="widget">
+                    <h3>Popular articles</h3>
+                    <div class="widget-content ot-w-article-list">
+
+                        <div class="item">
+                            <div class="item-header">
+                                <a href="#" class="img-read-later-button rm-btn-small">Read later</a>
+                                <a href="post.html"><img src="assets/images/photos/image-17.jpg" alt="" /></a>
+                            </div>
+                            <div class="item-content">
+                                <h4><a href="post.html">3 Generations Of Young Skywalkers Is The Path To So Many Feels</a></h4>
+                                <span class="item-meta">
+                                        <span class="item-meta-item"><i class="material-icons">access_time</i>January 12, 2015</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-header">
+                                <a href="#" class="img-read-later-button rm-btn-small">Read later</a>
+                                <a href="post.html"><img src="assets/images/photos/image-18.jpg" alt="" /></a>
+                            </div>
+                            <div class="item-content">
+                                <h4><a href="post.html">Meet DC's Legends of Tomorrow: Vandal Savage</a></h4>
+                                <span class="item-meta">
+                                        <span class="item-meta-item"><i class="material-icons">access_time</i>January 12, 2015</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-header">
+                                <a href="#" class="img-read-later-button rm-btn-small">Read later</a>
+                                <a href="post.html"><img src="assets/images/photos/image-19.jpg" alt="" /></a>
+                            </div>
+                            <div class="item-content">
+                                <h4><a href="post.html">YOU DECIDE: The Best Movie of 2015 - Final Four!</a></h4>
+                                <span class="item-meta">
+                                        <span class="item-meta-item"><i class="material-icons">access_time</i>January 12, 2015</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-header">
+                                <a href="#" class="img-read-later-button rm-btn-small">Read later</a>
+                                <a href="post.html"><img src="assets/images/photos/image-20.jpg" alt="" /></a>
+                            </div>
+                            <div class="item-content">
+                                <h4><a href="post.html">How Our Favorite Disney Characters Would look In Classic Paintings</a></h4>
+                                <span class="item-meta">
+                                        <span class="item-meta-item"><i class="material-icons">access_time</i>January 12, 2015</span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END .widget -->
+                </div>
+
+                <!-- BEGIN .widget -->
+                <div class="widget">
+                    <h3>Recent comments</h3>
+                    <div class="widget-content ot-w-comments-list">
+
+                        <div class="item">
+                            <div class="item-header">
+                                <a href="#"><img src="assets/images/photos/avatar-2.jpg" alt="" /></a>
+                            </div>
+                            <div class="item-content">
+                                <h4><a href="#">Orange Themes</a></h4>
+                                <p>Cum an officiis integebat neces sitat bus, impedi tes...</p>
+                                <span class="item-meta">
+                                        <a href="post.html" class="item-meta-item meta-button">View article <i class="fa fa-caret-right"></i></a>
+                                    </span>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-header">
+                                <img src="assets/images/no-avatar-50.jpg" alt="" />
+                            </div>
+                            <div class="item-content">
+                                <h4><a href="#">Leesa Valarie</a></h4>
+                                <p>Cum an officiis integebat neces sitat bus, impedi tes...</p>
+                                <span class="item-meta">
+                                        <a href="post.html" class="item-meta-item meta-button">View article <i class="fa fa-caret-right"></i></a>
+                                    </span>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="item-header">
+                                <a href="#"><img src="assets/images/photos/avatar-2.jpg" alt="" /></a>
+                            </div>
+                            <div class="item-content">
+                                <h4><a href="#">Orange Themes</a></h4>
+                                <p>Cum an officiis integebat neces sitat bus, impedi tes...</p>
+                                <span class="item-meta">
+                                        <a href="post.html" class="item-meta-item meta-button">View article <i class="fa fa-caret-right"></i></a>
+                                    </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END .widget -->
+                </div>
+
+                <!-- BEGIN .widget -->
+                <div class="widget">
+                    <h3>Tag Cloud</h3>
+                    <div class="tagcloud">
+                        <a href="blog.html">Dignissim</a>
+                        <a href="blog.html">Habeo quods</a>
+                        <a href="blog.html">Sumo</a>
+                        <a href="blog.html">Prima dicunt</a>
+                        <a href="blog.html">Scripser</a>
+                        <a href="blog.html">Dignissim</a>
+                        <a href="blog.html">Habeo quods</a>
+                        <a href="blog.html">Sumo</a>
+                        <a href="blog.html">Prima dicunt</a>
+                        <a href="blog.html">Scripser</a>
+                        <a href="blog.html">Dignissim</a>
+                        <a href="blog.html">Habeo quods</a>
+                    </div>
+                    <!-- END .widget -->
+                </div>
+
+
+                
+            </aside>
+
         </div>
+    </div>
         <!-- end: Featured entries carousel -->
         <div class="home-directory">
             <div class="container">

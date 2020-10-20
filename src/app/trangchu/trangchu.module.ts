@@ -7,6 +7,8 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TrangchuComponent } from './trangchu.component';
 import { DanhmucComponent } from './danhmuc/danhmuc.component';
+import  { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 export const trangchuRoutes: Routes = [
   {
@@ -33,6 +35,9 @@ export const trangchuRoutes: Routes = [
   declarations: [LienheComponent, DangtinComponent, ChitiettinComponent, DanhmucComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forChild(trangchuRoutes)
   ]
 })

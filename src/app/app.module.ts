@@ -9,6 +9,7 @@ import { MenuComponent } from './trangchu/menu/menu.component';
 import { FooterComponent } from './trangchu/layout/footer/footer.component';
 import  { HttpClientModule } from '@angular/common/http';
 import { Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -28,6 +29,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

@@ -486,8 +486,10 @@ ul {
 
 .intro-search {
     width: 100%;
-    max-width: 620px;
-    margin: 0 auto
+    max-width: 810px;
+    margin: 0 auto;
+    position: relative;
+    margin-top:30px;
 }
 
 .intro-search input {
@@ -514,12 +516,14 @@ ul {
     color: #fff;
     border: none;
     border-radius: 3px;
-    background: #81b441
+    background: #81b441;
+    position: relative;
 }
 
 .intro-search button img {
-    position: relative;
-    left: 27px
+    position: absolute;
+    right: 27px;
+    padding-top:10px;
 }
 
 .intro-search button:hover {
@@ -2923,7 +2927,13 @@ select {
     border: 0;
     border-radius: 3px;
     background-color: #f0f2f7;
-    box-shadow: none
+    box-shadow: none;
+    wisth: 70px;
+    width: 187px;
+    heught: 50px;
+    height: 63px;
+    /* position: absolute; */
+    margin-left: 2px;
 }
 
 .form-control:focus {
@@ -3254,7 +3264,7 @@ label {
 .checkbox-primary input[type=checkbox]:checked+label::after,
 .checkbox-success input[type=checkbox]:checked+label::after,
 .checkbox-warning input[type=checkbox]:checked+label::after {
-    color: #fff
+    color: #000;
 }
 
 .checkbox input[type=checkbox] {
