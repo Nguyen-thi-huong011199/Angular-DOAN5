@@ -24,6 +24,7 @@ const routes: Routes = [
     TrangchuComponent,
     HeaderComponent,
     MenuComponent,
+    
     FooterComponent
   ],
   imports: [

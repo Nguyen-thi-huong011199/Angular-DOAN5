@@ -1,5 +1,5 @@
 <div class="page_header">
-    <div class="profile_carousel">
+    <div style="max-width: 104%; height: 400px;" class="profile_carousel">
         <div>
             <img src="assets/images/profile/1.jpg" alt="">
         </div>
@@ -23,15 +23,15 @@
         </div>
         <div>
             <img src="assets/images/profile/8.jpg" alt="">
-        </div>
+        </div> 
     </div>
     <div class="container">
         <ul class="bcrumbs">
-            <li><a href="#">Restaurant guide</a>
+            <li><a href="#">Đa dạng việc làm</a>
             </li>
-            <li><a href="#">Restaurants Paris</a>
+            <li><a href="#">Công việc yêu thích</a>
             </li>
-            <li>Restaurant Laurent - Alain Pegouret - Paris</li>
+            <li>Chi tiết tin việc làm</li>
         </ul>
     </div>
 </div>
@@ -41,17 +41,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 dph-info">
-                    <img src="assets/images/profile.png" class="profile-img" alt="" />
+                    <img src="assets/images/{{vieclam.anh}}" class="profile-img" alt="" />
                     <div>
-                        <h4>Restaurant Laurent - Alain</h4>
-                        <p>41,avenue Gabriel75008 Paris +080 25 6535 22</p>
-                        <a href="#">French</a>
-                        <a href="#">Luxury</a>
+                        <h4>{{vieclam.tenCv}}</h4>
+                        <p>{{vieclam.diachi}}</p>
+                        <p>Qui mô: Từ 25 - 99 nhân viên</p>
+                        <p>Hạn nộp hồ sơ: 20/12/2020 (Còn 2 tháng)</p>
                     </div>
                 </div>
                 <div class="col-md-4 dph-reviews">
-                    <p><span>9,2 &nbsp;<em>/10</em></span> 21 reviews</p>
-                    <p class="dph-rec"><i class="fa fa-star-o"></i><span>178</span> Recommendations</p>
+                    <p><span>{{vieclam.ngaydang}}</span> 21 reviews</p>
+                    <p class="dph-rec"><i class="fa fa-star-o"></i><span>{{vieclam.luotxem}}</span> </p>
                 </div>
             </div>
         </div>
@@ -64,11 +64,8 @@
                     <div class="dp-about">
                         <p class="space120">
                             <img src="assets/images/icons/1.png" alt="" />
-                            <span class="lead">About this listing</span> Pork belly iPhone twee dreamcatcher kitsch. Listicle cliche vegan lomo typewriter, hoodie beard mlkshk. Mumblecore squid trust fund semiotics, brunch umami typewriter meditation
-                            stumptown chartreuse.
-                            <br>
-                            <br>Whatever synth locavore, <span class="highlight-dark">roof party post-ironic vegan freegan sustainable</span>. Biodiesel pabst green juice cronut, gochujang try-hard vinyl raw denim fap chillwave cray messenger
-                            bag gentrify <span class="highlight"><b>flexitarian</b></span> umami.
+                            <span class="lead">Mô tả công việc</span> 
+                            <br>{{vieclam.motaCv}} 
                         </p>
                         <p class="space80">
                             <img src="assets/images/icons/2.png" alt="" />

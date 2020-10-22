@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ViecLamService } from 'src/app/_services/vieclam.service';
+
 
 @Component({
   selector: 'app-chitiettin',
@@ -7,28 +9,30 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./chitiettin.component.css']
 })
 export class ChitiettinComponent implements OnInit {
+  list: any;
   id:number;
   vieclam: any;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private viecLamService: ViecLamService,
   ) { }
 
   ngOnInit(): void {
-    document.body.scrollTop = 0;
-    
-    this.id = this.route.snapshot.params['id'];
-    if(this.id) {
-      // this.vieclamService.getTheoId(this.id).toPromise()
-      // .then(res => {
-      //   this.vieclam = res;
-      // })
-      // .catch(err => console.error(err));
-    }
+
+    this.route.params.subscribe(res => {
+      let id = res['id'];
+      this.viecLamService.getTheoId(id).toPromise()
+      .then(res => {
+        this.vieclam = res;
+        document.body.scrollTop = 0;
+      })
+      .catch(err => console.error(err));
+    });
   }
 
 }
-
+  
 
 
 

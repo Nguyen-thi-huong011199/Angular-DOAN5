@@ -1523,7 +1523,8 @@ a.ot-color-hover-youtube:hover i.fa {
 
 .composs-article-split-block .item {
     display: block;
-    margin-bottom: 25px
+    margin-bottom: 25px;
+    width:900px;
 }
 
 .composs-article-split-block .item:last-child {
@@ -1544,7 +1545,8 @@ a.ot-color-hover-youtube:hover i.fa {
 }
 
 .composs-article-split-block .item-small .item .item-content {
-    margin-left: 110px
+   float: left;
+   margin-left: 20px;
 }
 
 .composs-article-split-block .item-small .item .item-content h2 {

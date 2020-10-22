@@ -9,6 +9,8 @@ import { TrangchuComponent } from './trangchu.component';
 import { DanhmucComponent } from './danhmuc/danhmuc.component';
 import  { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DangkyComponent } from './dangky/dangky.component';
+import { DangnhapComponent } from './dangnhap/dangnhap.component';
 
 export const trangchuRoutes: Routes = [
   {
@@ -18,7 +20,7 @@ export const trangchuRoutes: Routes = [
         path: '', component: MenuComponent
       },
       {
-        path: 'chi-tiet-tin', component: ChitiettinComponent
+        path: 'chi-tiet-tin/:id', component: ChitiettinComponent
       },
       {
         path: 'danh-muc', component: DanhmucComponent
@@ -26,13 +28,19 @@ export const trangchuRoutes: Routes = [
       {
         path: 'lien-he', component: LienheComponent
       },
+      {
+        path: 'dang-ky', component: DangkyComponent
+      },
+      {
+        path: 'dang-nhap', component: DangnhapComponent
+      },
     ]
   }
 ]
 
 
 @NgModule({
-  declarations: [LienheComponent, DangtinComponent, ChitiettinComponent, DanhmucComponent],
+  declarations: [LienheComponent, DangtinComponent, ChitiettinComponent, DanhmucComponent, DangkyComponent, DangnhapComponent],
   imports: [
     CommonModule,
     HttpClientModule,

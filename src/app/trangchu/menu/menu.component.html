@@ -7,6 +7,7 @@
         <form class="intro-search" [formGroup]="form" (ngSubmit)="onSubmit()">
             <input type="text" placeholder="Nhập tên việc làm, vị trí... " formControlName="key_name">
             <select formControlName="type">
+                <option>Chọn ngành</option>
                 <option *ngFor="let item of loaicvs" value="{{item.maloaiCv}}">{{item.tenloaiCv}}</option>
             </select>
             <button type="submit">Tìm kiếm <img src="assets/images/icons/search.png" alt="" /> </button>
@@ -25,7 +26,7 @@
                 <div class="composs-panel">
 
                     <div class="composs-panel-title composs-panel-title-tabbed">
-                        <strong class="active">Todays hottest articles</strong>
+                        <strong class="active">Giáo Dục - Đào Tạo</strong>
                     </div>
 
                     <div class="composs-panel-inner">
@@ -34,12 +35,19 @@
                                 <div class="item-small">
                                     <div class="item" *ngFor="let item of loaicvtype1">
                                         <div class="item-header">
-                                            <a href="#" class="img-read-later-button rm-btn-small">Read later</a>
-                                            <a href="post.html"><img src="assets/images/{{item.anh}}" alt=""/></a>
+                                            <a href="#" class="img-read-later-button rm-btn-small">Viêc làm mới</a>
+                                            <a [routerLink]="['chi-tiet-tin', item.maCv]"><img src="assets/images/{{item.anh}}" alt=""/></a>
                                         </div>
                                         <div class="item-content">
-                                            <h2><a href="post.html">{{item.tenCv}}</a></h2>
+                                            <h2><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h2>
+                                            <h2 style="font-weight: 300;">{{item.tencongty}}</h2>
+                                            <h2 style="font-weight: 300;">{{item.diachi}}</h2>
                                             <span class="item-meta">
+                                                   
+                                                    <a href="post.html#comments" class="item-meta-item"><i class="material-icons">chat_bubble_outline</i>Mức lương: {{item.mucluong}}</a>
+                                                    <a href="post.html#comments" class="item-meta-item"><span class="post-views">Lượt xem: {{item.luotxem}}</span></a>
+                                                    <br>
+                                                    <br>
                                                     <span class="item-meta-item"><i class="material-icons">access_time</i>{{item.ngaydang}}</span>
                                             </span>
                                         </div>
@@ -58,7 +66,7 @@
                 <div class="composs-panel">
 
                     <div class="composs-panel-title composs-panel-title-tabbed">
-                        <strong class="active">Latest reviews</strong>
+                        <strong class="active">Xuất khẩu lao động</strong>
                     </div>
 
                     <div class="composs-panel-inner">
@@ -68,11 +76,11 @@
 
                                 <div class="item" *ngFor="let item of loaicvtype2">
                                     <div class="item-header">
-                                        <a href="#" class="img-read-later-button">Read later</a>
-                                        <a href="post.html"><img src="assets/images/{{item.anh}}" alt="" /></a>
+                                        <a href="#" class="img-read-later-button">Viêc làm mới</a>
+                                        <a [routerLink]="['chi-tiet-tin', item.maCv]"><img src="assets/images/{{item.anh}}" alt="" /></a>
                                     </div>
                                     <div class="item-content">
-                                        <h2><a href="post.html">{{item.tenCv}}</a></h2>
+                                        <h2><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h2>
                                         <span class="item-meta">
                                                 <span class="item-meta-item"><i class="material-icons">access_time</i>{{item.ngaydang}}</span>
                                         <a href="post.html#comments" class="item-meta-item"><i class="material-icons">chat_bubble_outline</i>35</a>
@@ -92,7 +100,7 @@
                 <div class="composs-panel">
 
                     <div class="composs-panel-title">
-                        <strong>Most recent articles</strong>
+                        <strong>Bảo hiểm</strong>
                     </div>
 
                     <div class="composs-panel-inner">
@@ -101,14 +109,14 @@
 
                             <div class="item" *ngFor="let item of loaicvtype3">
                                 <div class="item-header">
-                                    <a href="#" class="img-read-later-button">Read later</a>
-                                    <a href="post.html"><img src="assets/images/{{item.anh}}" alt="" /></a>
+                                    <a href="#" class="img-read-later-button">Viêc làm mới</a>
+                                    <a [routerLink]="['chi-tiet-tin', item.maCv]"><img src="assets/images/{{item.anh}}" alt="" /></a>
                                 </div>
                                 <div class="item-content">
-                                    <h2><a href="post.html">{{item.tenCv}}</a></h2>
+                                    <h2><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h2>
                                     <span class="item-meta">
                                             <span class="item-meta-item"><i class="material-icons">access_time</i>{{item.ngaydang}}</span>
-                                    <a href="post.html#comments" class="item-meta-item"><i class="material-icons">chat_bubble_outline</i>35</a>
+                                    <a href="post.html#comments" class="item-meta-item"><i class="material-icons">chat_bubble_outline</i>{{item.luotxem}}</a>
                                     </span>
                                     <p>{{item.motaCv}}</p>
                                 </div>
@@ -127,7 +135,7 @@
             <aside id="sidebar">
                 <!-- BEGIN .widget -->
                 <div class="widget">
-                    <h3>Socialize</h3>
+                    <h3>Lượt theo dõi</h3>
                     <div class="widget-content ot-w-socialize">
                         <a href="#" class="ot-color-hover-facebook"><i class="fa fa-facebook"></i><span><i>13 956</i> fans</span></a>
                         <a href="#" class="ot-color-hover-twitter"><i class="fa fa-twitter"></i><span><i>2 042</i> followers</span></a>
@@ -148,12 +156,12 @@
 
                 <!-- BEGIN .widget -->
                 <div class="widget">
-                    <h3>Popular articles</h3>
+                    <h3>Việc làm hot</h3>
                     <div class="widget-content ot-w-article-list">
 
                         <div class="item">
                             <div class="item-header">
-                                <a href="#" class="img-read-later-button rm-btn-small">Read later</a>
+                                <a href="#" class="img-read-later-button rm-btn-small">Viêc làm mới</a>
                                 <a href="post.html"><img src="assets/images/photos/image-17.jpg" alt="" /></a>
                             </div>
                             <div class="item-content">
@@ -166,7 +174,7 @@
 
                         <div class="item">
                             <div class="item-header">
-                                <a href="#" class="img-read-later-button rm-btn-small">Read later</a>
+                                <a href="#" class="img-read-later-button rm-btn-small">Viêc làm mới</a>
                                 <a href="post.html"><img src="assets/images/photos/image-18.jpg" alt="" /></a>
                             </div>
                             <div class="item-content">
@@ -179,7 +187,7 @@
 
                         <div class="item">
                             <div class="item-header">
-                                <a href="#" class="img-read-later-button rm-btn-small">Read later</a>
+                                <a href="#" class="img-read-later-button rm-btn-small">Viêc làm mới</a>
                                 <a href="post.html"><img src="assets/images/photos/image-19.jpg" alt="" /></a>
                             </div>
                             <div class="item-content">
@@ -192,7 +200,7 @@
 
                         <div class="item">
                             <div class="item-header">
-                                <a href="#" class="img-read-later-button rm-btn-small">Read later</a>
+                                <a href="#" class="img-read-later-button rm-btn-small">Viêc làm mới</a>
                                 <a href="post.html"><img src="assets/images/photos/image-20.jpg" alt="" /></a>
                             </div>
                             <div class="item-content">
@@ -208,56 +216,11 @@
                 </div>
 
                 <!-- BEGIN .widget -->
-                <div class="widget">
-                    <h3>Recent comments</h3>
-                    <div class="widget-content ot-w-comments-list">
-
-                        <div class="item">
-                            <div class="item-header">
-                                <a href="#"><img src="assets/images/photos/avatar-2.jpg" alt="" /></a>
-                            </div>
-                            <div class="item-content">
-                                <h4><a href="#">Orange Themes</a></h4>
-                                <p>Cum an officiis integebat neces sitat bus, impedi tes...</p>
-                                <span class="item-meta">
-                                        <a href="post.html" class="item-meta-item meta-button">View article <i class="fa fa-caret-right"></i></a>
-                                    </span>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="item-header">
-                                <img src="assets/images/no-avatar-50.jpg" alt="" />
-                            </div>
-                            <div class="item-content">
-                                <h4><a href="#">Leesa Valarie</a></h4>
-                                <p>Cum an officiis integebat neces sitat bus, impedi tes...</p>
-                                <span class="item-meta">
-                                        <a href="post.html" class="item-meta-item meta-button">View article <i class="fa fa-caret-right"></i></a>
-                                    </span>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="item-header">
-                                <a href="#"><img src="assets/images/photos/avatar-2.jpg" alt="" /></a>
-                            </div>
-                            <div class="item-content">
-                                <h4><a href="#">Orange Themes</a></h4>
-                                <p>Cum an officiis integebat neces sitat bus, impedi tes...</p>
-                                <span class="item-meta">
-                                        <a href="post.html" class="item-meta-item meta-button">View article <i class="fa fa-caret-right"></i></a>
-                                    </span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- END .widget -->
-                </div>
+               
 
                 <!-- BEGIN .widget -->
                 <div class="widget">
-                    <h3>Tag Cloud</h3>
+                    <h3>Các ngành nghề</h3>
                     <div class="tagcloud">
                         <a href="blog.html">Dignissim</a>
                         <a href="blog.html">Habeo quods</a>
@@ -278,9 +241,7 @@
 
                 
             </aside>
-
         </div>
-    </div>
         <!-- end: Featured entries carousel -->
         <div class="home-directory">
             <div class="container">
@@ -431,4 +392,4 @@
                 </div>
             </div>
         </div>
-        
+    </div>
