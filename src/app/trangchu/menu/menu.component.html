@@ -44,11 +44,11 @@
                                             <h2 style="font-weight: 300;">{{item.diachi}}</h2>
                                             <span class="item-meta">
                                                    
-                                                    <a href="post.html#comments" class="item-meta-item"><i class="material-icons">chat_bubble_outline</i>Mức lương: {{item.mucluong}}</a>
+                                                    <a href="post.html#comments" class="item-meta-item"><i class="material-icons"></i>Mức lương: {{item.mucluong}}</a>
                                                     <a href="post.html#comments" class="item-meta-item"><span class="post-views">Lượt xem: {{item.luotxem}}</span></a>
                                                     <br>
                                                     <br>
-                                                    <span class="item-meta-item"><i class="material-icons">access_time</i>{{item.ngaydang}}</span>
+                                                    <span class="item-meta-item"><i class="material-icons"></i>{{item.ngaydang}}</span>
                                             </span>
                                         </div>
                                     </div>
@@ -81,11 +81,14 @@
                                     </div>
                                     <div class="item-content">
                                         <h2><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h2>
+                                        <h2 style="font-weight: 300;">{{item.tencongty}}</h2>
+                                            <h2 style="font-weight: 300;">{{item.diachi}}</h2>
                                         <span class="item-meta">
-                                                <span class="item-meta-item"><i class="material-icons">access_time</i>{{item.ngaydang}}</span>
-                                        <a href="post.html#comments" class="item-meta-item"><i class="material-icons">chat_bubble_outline</i>35</a>
+                                            <a href="post.html#comments" class="item-meta-item"><i class="material-icons"></i>Mức lương: {{item.mucluong}}</a><br>
+                                                <span class="item-meta-item"><i class="material-icons"></i>{{item.ngaydang}}</span>
+                                                <a href="post.html#comments" class="item-meta-item"><span class="post-views">Lượt xem: {{item.luotxem}}</span></a>
                                         </span>
-                                        <span class="item-stars"><span class="stars-inner" data-ot-css="width: 80%;"></span></span>
+                                        
                                     </div>
                                 </div>
 
@@ -114,9 +117,12 @@
                                 </div>
                                 <div class="item-content">
                                     <h2><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h2>
+                                    <h2 style="font-weight: 300;">{{item.tencongty}}</h2>
+                                    <h2 style="font-weight: 300;">{{item.diachi}}</h2>
                                     <span class="item-meta">
-                                            <span class="item-meta-item"><i class="material-icons">access_time</i>{{item.ngaydang}}</span>
-                                    <a href="post.html#comments" class="item-meta-item"><i class="material-icons">chat_bubble_outline</i>{{item.luotxem}}</a>
+                                        <a href="post.html#comments" class="item-meta-item"><i class="material-icons"></i>Mức lương: {{item.mucluong}}</a><br>
+                                            <span class="item-meta-item"><i class="material-icons"></i>{{item.ngaydang}}</span>
+                                            <a href="post.html#comments" class="item-meta-item"><span class="post-views">Lượt xem: {{item.luotxem}}</span></a>
                                     </span>
                                     <p>{{item.motaCv}}</p>
                                 </div>
@@ -137,11 +143,11 @@
                 <div class="widget">
                     <h3>Lượt theo dõi</h3>
                     <div class="widget-content ot-w-socialize">
-                        <a href="#" class="ot-color-hover-facebook"><i class="fa fa-facebook"></i><span><i>13 956</i> fans</span></a>
-                        <a href="#" class="ot-color-hover-twitter"><i class="fa fa-twitter"></i><span><i>2 042</i> followers</span></a>
-                        <a href="#" class="ot-color-hover-google-plus"><i class="fa fa-google-plus"></i><span><i>184</i> followers</span></a>
-                        <a href="#" class="ot-color-hover-youtube"><i class="fa fa-youtube-play"></i><span><i>502</i> subscribers</span></a>
-                        <a href="#" class="ot-color-hover-rss"><i class="fa fa-rss"></i><span><i>2 831</i> rss feeders</span></a>
+                        <a href="#" class="ot-color-hover-facebook"><span><i>13 956</i> fans</span></a>
+                        <a href="#" class="ot-color-hover-twitter"><span><i>2 042</i> followers</span></a>
+                        <a href="#" class="ot-color-hover-google-plus"><span><i>184</i> followers</span></a>
+                        <a href="#" class="ot-color-hover-youtube"><span><i>502</i> subscribers</span></a>
+                        <a href="#" class="ot-color-hover-rss"><span><i>2 831</i> rss feeders</span></a>
                     </div>
                     <!-- END .widget -->
                 </div>
@@ -222,18 +228,18 @@
                 <div class="widget">
                     <h3>Các ngành nghề</h3>
                     <div class="tagcloud">
-                        <a href="blog.html">Dignissim</a>
-                        <a href="blog.html">Habeo quods</a>
-                        <a href="blog.html">Sumo</a>
-                        <a href="blog.html">Prima dicunt</a>
-                        <a href="blog.html">Scripser</a>
-                        <a href="blog.html">Dignissim</a>
-                        <a href="blog.html">Habeo quods</a>
-                        <a href="blog.html">Sumo</a>
-                        <a href="blog.html">Prima dicunt</a>
-                        <a href="blog.html">Scripser</a>
-                        <a href="blog.html">Dignissim</a>
-                        <a href="blog.html">Habeo quods</a>
+                        <a href="blog.html">Bảo hiểm</a>
+                        <a href="blog.html">Giáo dục-Đào tạo </a>
+                        <a href="blog.html">Xuất khẩu lao động</a>
+                        <a href="blog.html">Xây dựng</a>
+                        <a href="blog.html">Y tế-Dược</a>
+                        <a href="blog.html">Lao động</a>
+                        <a href="blog.html">IT Phần mềm</a>
+                        <a href="blog.html">Kế toán kiểm toán </a>
+                        <a href="blog.html">Giao thông-Vận tải</a>
+                        <a href="blog.html">Giúp việc</a>
+                        <a href="blog.html">Kinh doanh</a>
+                        <a href="blog.html">Dệt-May đo</a>
                     </div>
                     <!-- END .widget -->
                 </div>
@@ -326,68 +332,31 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 col-md-push-5">
-                        <h3>Promote your business today and get discount of 50%</h3>
-                        <div class="space30"></div> <a href="#" class="btn btn-default btn-lg">Sign up for an account</a> </div>
+                        <h3>Một tìm kiếm triệu việc làm </h3>
+                        <div class="space30"></div> <a href="#" class="btn btn-default btn-lg">Đăng ký tài khoản</a> </div>
                 </div>
             </div>
         </div>
         <div class="home-testimonials">
             <div class="container">
                 <div class="section-head text-center">
-                    <h3>What our community is saying</h3>
+                    <h3>Nhà tuyển dụng</h3>
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-6 mob-space30">
-                        <div class="quote text-center"> <img src="assets/images/quotes/1.png" class="center-block" alt="" />
-                            <p>Nothing draws a crowd
-                                <br>quite like a crowd. </p> <cite>&ndash; P.T. Barnum</cite> </div>
+                        <div class="quote text-center"> <img src="assets/images/anh1.jpg"  alt="" />
+                            <p>FPT Software
+                                <br>Nơi đáng tin cậy của mọi người </p> <cite>&ndash; NGUYỄN HỮU ĐÔNG</cite> </div>
                     </div>
                     <div class="col-md-4 col-sm-6 mob-space30">
-                        <div class="quote text-center"> <img src="assets/images/quotes/2.png" class="center-block" alt="" />
-                            <p>Nothing draws a crowd
-                                <br>quite like a crowd. </p> <cite>&ndash; P.T. Barnum</cite> </div>
+                        <div class="quote text-center"> <img src="assets/images/anh2.jpg"  alt="" />
+                            <p>ELDER DEVELOPMENT
+                                <br>Nhiều công việc mới </p> <cite>&ndash; TRỊNH THỊ NHỊ</cite> </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
-                        <div class="quote text-center"> <img src="assets/images/quotes/3.png" class="center-block" alt="" />
-                            <p>Nothing draws a crowd
-                                <br>quite like a crowd. </p> <cite>&ndash; P.T. Barnum</cite> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="home-news">
-            <div class="container">
-                <div class="section-head text-center">
-                    <h3>News & Updates</h3>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 mob-space30">
-                        <div class="post">
-                            <div class="post-thumb bg-image" data-image-src="assets/images/home/blog/1.jpg">
-                                <a href="#">
-                                    <div class="post-badge">Promotion</div>
-                                </a>
-                            </div>
-                            <div class="post-detail">
-                                <time datetime="2008-02-14 20:00">March 20 2016</time>
-                                <h4><a href="#">How to promote your <br>business</a></h4> <a href="#" class="post-like">256</a> <a href="#" class="post-views">1255</a> </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 mob-space30">
-                        <div class="post">
-                            <a href="#" class="post-thumb bg-image" data-image-src="assets/images/home/blog/2.jpg"></a>
-                            <div class="post-detail">
-                                <time datetime="2008-02-14 20:00">March 20 2016</time>
-                                <h4><a href="#">10 tips for your business <br>routine</a></h4> <a href="#" class="post-like">256</a> <a href="#" class="post-views">1255</a> </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
-                        <div class="post">
-                            <a href="#" class="post-thumb bg-image" data-image-src="assets/images/home/blog/3.jpg"></a>
-                            <div class="post-detail">
-                                <time datetime="2008-02-14 20:00">March 20 2016</time>
-                                <h4><a href="#">Dont forget to leave 5 star <br>ratings</a></h4> <a href="#" class="post-like">256</a> <a href="#" class="post-views">1255</a> </div>
-                        </div>
+                        <div class="quote text-center"> <img src="assets/images/anh3.jpg"  alt="" />
+                            <p>TUYỂN DỤNG
+                                <br>Triệu việc làm mơ ước</p> <cite>&ndash; TRẦN ĐỖ THU HÀ</cite> </div>
                     </div>
                 </div>
             </div>
