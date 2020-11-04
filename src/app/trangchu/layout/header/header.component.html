@@ -1,6 +1,11 @@
 <nav class="navbar-default navbar-fixed-top">
     <div class="container">
-        <a href="#" class="nav-trigger hidden-xs" data-toggle="modal" data-target="#myModal"></a>
+        <a href="#" class="nav-trigger hidden-xs" data-toggle="modal" data-target="#myModal"  [formGroup]="form"  (ngSubmit)="onSubmit()">
+            <select formControlName="type">
+                <option>Chọn ngành</option>
+                <option *ngFor="let item of loaicvs" value="{{item.maloaiCv}}">{{item.tenloaiCv}}</option>
+            </select>
+        </a>
         <div class="navbar-header"> <a href="./index.html" class="navbar-brand">365<span>Tìm</span>Việc</a> </div>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

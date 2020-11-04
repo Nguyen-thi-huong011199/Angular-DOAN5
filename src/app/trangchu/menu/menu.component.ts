@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
   loaicvtype1: any[];
   loaicvtype2: any[];
   loaicvtype3: any[];
+  loaicvtype4: any[];
   form: FormGroup;
 
   constructor(
@@ -42,6 +43,10 @@ export class MenuComponent implements OnInit {
     this.viecLamService.getLoai(2, 6).toPromise()
     .then(res => {
       this.loaicvtype3 = res;
+    });
+    this.viecLamService.getLoai(3, 6).toPromise()
+    .then(res => {
+      this.loaicvtype4 = res;
     });
 
     this.form = this.formBuilder.group({

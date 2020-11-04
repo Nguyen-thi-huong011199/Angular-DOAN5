@@ -252,13 +252,14 @@
         <div class="home-directory">
             <div class="container">
                 <div class="section-head text-center">
-                    <h3>Best rated services & offers</h3>
-                    <p class="lead">Explore some of the best place around your place and leave a review.</p>
+                    <h3>Chăm sóc khách hàng</h3>
+                    <p class="lead">Khám phá một số việc làm tốt nhất xung quanh địa điểm của bạn và để lại đánh giá.
+                    </p>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="listing mob-space30">
-                            <div class="listing-img bg-image" data-image-src="assets/images/home/1.jpg">
+                    <div class="col-md-4 col-sm-6" *ngFor="let item of loaicvtype4">
+                        <div class="listing mob-space30" >
+                            <div class="listing-img bg-image" data-image-src="assets/images/{{item.anh}}">
                                 <div class="li-overlay">
                                     <div class="li-overlay-inner">
                                         <a href="#" class="mail"></a>
@@ -268,59 +269,14 @@
                                 </div>
                             </div>
                             <div class="listing-info">
-                                <h4 class="li-name"><a href="#">Central Restaurant</a></h4>
+                                <h4 class="li-name"><a href="#">{{item.tenCv}}</a></h4>
                                 <ul class="list-icon">
-                                    <li> <i class="pe-7s-map-marker"></i> 45 Park Avenue, Apt. 303 New York,</li>
-                                    <li> <i class="pe-7s-call"></i> 001 (917) 555-4836</li>
-                                    <li> <i class="pe-7s-mail"></i> <a href="mailto:new_york@mail.com">new_york@mail.com</a> </li>
+                                    <li> <i class="pe-7s-map-marker"></i> {{item.tencongty}}</li>
+                                    <li> <i class="pe-7s-call"></i> {{item.diachi}}</li>
+                                    <li> <i class="pe-7s-mail"></i> <a href="#">{{item.mucluong}}</a> </li>
+                                    <li> <i class="pe-7s-mail"></i> <a href="#">{{item.ngaydang}}</a> </li>
                                 </ul>
-                                <div class="list-ratings">4.8</div>
-                            </div>
-                        </div>
-                        <!-- end: Listing item -->
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="listing mob-space30">
-                            <div class="listing-img bg-image" data-image-src="assets/images/home/2.jpg">
-                                <div class="li-overlay">
-                                    <div class="li-overlay-inner">
-                                        <a href="#" class="mail"></a>
-                                        <a href="#" class="menu"></a>
-                                        <a href="#" class="link"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="listing-info">
-                                <h4 class="li-name"><a href="#">Central Restaurant</a></h4>
-                                <ul class="list-icon">
-                                    <li> <i class="pe-7s-map-marker"></i> 45 Park Avenue, Apt. 303 New York,</li>
-                                    <li> <i class="pe-7s-call"></i> 001 (917) 555-4836</li>
-                                    <li> <i class="pe-7s-mail"></i> <a href="mailto:new_york@mail.com">new_york@mail.com</a> </li>
-                                </ul>
-                                <div class="list-ratings">4.9</div>
-                            </div>
-                        </div>
-                        <!-- end: Listing item -->
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
-                        <div class="listing">
-                            <div class="listing-img bg-image" data-image-src="assets/images/home/3.jpg">
-                                <div class="li-overlay">
-                                    <div class="li-overlay-inner">
-                                        <a href="#" class="mail"></a>
-                                        <a href="#" class="menu"></a>
-                                        <a href="#" class="link"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="listing-info">
-                                <h4 class="li-name"><a href="#">Central Restaurant</a></h4>
-                                <ul class="list-icon">
-                                    <li> <i class="pe-7s-map-marker"></i> 45 Park Avenue New York</li>
-                                    <li> <i class="pe-7s-call"></i> 001 (917) 555-4836</li>
-                                    <li> <i class="pe-7s-mail"></i> <a href="mailto:new_york@mail.com">new_york@mail.com</a> </li>
-                                </ul>
-                                <div class="list-ratings">4.7</div>
+                                <div class="list-ratings">{{item.luotxem}}</div>
                             </div>
                         </div>
                         <!-- end: Listing item -->

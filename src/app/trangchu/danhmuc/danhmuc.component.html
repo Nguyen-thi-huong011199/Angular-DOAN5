@@ -2,9 +2,9 @@
     <img src="assets/images/header/2.jpg" class="img-responsive" alt="" />
     <div class="container">
         <ul class="bcrumbs">
-            <li><a href="#">Loocall guide</a>
+            <li><a href="#">Tìm kiếm</a>
             </li>
-            <li>Blog</li>
+            <li>Danh mục việc làm</li>
         </ul>
     </div>
 </div>
@@ -14,102 +14,22 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="side-widget space30">
-                    <h5>Filter Listings</h5>
+                    <h5>Danh mục loại công việc</h5>
                     <div class="side-cat2">
                         <form>
                             <select class="categorie">
-                                <option>Categories</option>
-                                <option>Restaurants</option>
-                                <option>Caffe</option>
-                                <option>Sport</option>
+                                <option>Kinh doanh bất động sản</option>
+                                <option>Bảo Hiểm</option>
+                                <option>Y tế - Dược</option>
+                                <option>Giáo dục - Đào Tạo</option>
                             </select>
-                            <input class="keyword" type="search" placeholder="Keyword">
-                            <input class="location" type="search" placeholder="Location">
-                            <input class="radius" type="search" placeholder="Radius (5 km)">
-                            <input class="reviews" type="search" placeholder="Reviews count (2)" disabled>
-                            <input type="checkbox" class="cbox" name="r-cbox" id="r-cbox1" />
-                            <label for="r-cbox1">
-                                <span class="star-ratings">
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        </span>
-                            </label>
-                            <br/>
-                            <input type="checkbox" class="cbox" name="r-cbox" id="r-cbox2" />
-                            <label for="r-cbox2">
-                                <span class="star-ratings">
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o no"></i>
-                        </span>
-                            </label>
-                            <br/>
-                            <input type="checkbox" class="cbox" name="r-cbox" id="r-cbox3" />
-                            <label for="r-cbox3">
-                                <span class="star-ratings">
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o no"></i>
-                        <i class="fa fa-star-o no"></i>
-                        </span>
-                            </label>
-                            <br/>
-                            <button type="submit">Search listings</button>
+                            <input class="keyword" type="search" placeholder="Việc làm hot">
+                            <input class="location" type="search" placeholder="Việc làm mới">
+                            <input class="radius" type="search" placeholder="Việc làm với mức lương cao">
+                            <input class="reviews" type="search" placeholder=" Việc làm dài lâu" disabled>
+                            <button type="submit">Tìm kiếm danh sách</button>
                         </form>
                     </div>
-                </div>
-                <div class="side-widget space30">
-                    <h5>Recently rated listings</h5>
-                    <ul class="rlistings">
-                        <li>
-                            <a href="#">
-                                <img src="assets/images/other/1.jpg" alt="" />
-                            </a>
-                            <h4><a href="#">Caffe bar Trattoria Due</a></h4>
-                            <p>Italian restaurant and caffe</p>
-                            <span class="star-ratings">
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o no"></i>
-                        </span>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="assets/images/other/2.jpg" alt="" />
-                            </a>
-                            <h4><a href="#">Group deal -70%</a></h4>
-                            <p>Awesome offer</p>
-                            <span class="star-ratings">
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        </span>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="assets/images/other/3.jpg" alt="" />
-                            </a>
-                            <h4><a href="#">Room booking deal</a></h4>
-                            <p>Book your hotel room for $40</p>
-                            <span class="star-ratings">
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o no"></i>
-                        <i class="fa fa-star-o no"></i>
-                        <i class="fa fa-star-o no"></i>
-                        </span>
-                        </li>
-                    </ul>
                 </div>
             </div>
 
@@ -148,10 +68,11 @@
                                 <h4 class="li-name"><a href="#">{{item.tenCv}}</a></h4>
                                 <p class="li-category">{{item.tencongty}}</p>
                                 <p class="li-location">{{item.diachi}}</p>
+                                <p>{{item.mucluong}}</p>
                             </div>
                             <div class="list-ratings-wrap">
                                 <div class="list-ratings2">{{item.luotxem}}</div>
-                                <p>{{item.mucluong}}</p>
+                                <p>{{item.ngaydang}}</p>
                             </div>
                         </div>
                     </div>
