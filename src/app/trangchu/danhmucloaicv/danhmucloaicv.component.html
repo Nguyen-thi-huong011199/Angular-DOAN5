@@ -1,0 +1,92 @@
+<div class="page_header">
+    <img src="assets/images/header/2.jpg" class="img-responsive" alt="" />
+    <div class="container">
+        <ul class="bcrumbs">
+            <li>Danh mục loại công việc</li>
+        </ul>
+    </div>
+</div>
+
+<div class="search-content blog-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="side-widget space30">
+                    <h5>Danh mục loại công việc</h5>
+                    <div class="side-cat2">
+                        <form>
+                            <select class="categorie">
+                                <option>Kinh doanh bất động sản</option>
+                                <option>Bảo Hiểm</option>
+                                <option>Y tế - Dược</option>
+                                <option>Giáo dục - Đào Tạo</option>
+                            </select>
+                            <input class="keyword" type="search" placeholder="Việc làm hot">
+                            <input class="location" type="search" placeholder="Việc làm mới">
+                            <input class="radius" type="search" placeholder="Việc làm với mức lương cao">
+                            <input class="reviews" type="search" placeholder=" Việc làm dài lâu" disabled>
+                            <button type="submit">Tìm kiếm danh sách</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 dir-search dir-search-list">
+                <div class="search-filter">
+                    <ul>
+                        <li><b><a href="#">Danh mục việc làm</a></b>
+                        </li>
+                        
+                        <li>
+                            <a href="directory_search.html">
+                                <img src="assets/images/icons/grid.png" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="assets/images/icons/list.png" alt="" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row" *ngIf="list">
+                    <div class="col-md-12" *ngFor="let item of list">
+                        <div class="listing space30">
+                            <div class="listing-img bg-image" style="background: url('assets/images/{{item.anh}}') center center / cover no-repeat;">
+
+                                <div class="li-overlay">
+                                    <div class="li-overlay-inner">
+                                        <a href="#" class="mail"></a>
+                                        <a href="#" class="menu"></a>
+                                        <a href="#" class="link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="listing-info">
+                                <h4 class="li-name"><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h4>
+                                <p class="li-category">{{item.tencongty}}</p>
+                                <p class="li-location">{{item.diachi}}</p>
+                                <p>{{item.mucluong}}</p>
+                            </div>
+                            <div class="list-ratings-wrap">
+                                <div class="list-ratings2">{{item.luotxem}}</div>
+                                <p>{{item.ngaydang}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="dpr-pager">
+                    <li><a href="#">1</a>
+                    </li>
+                    <li><a href="#">2</a>
+                    </li>
+                    <li><a href="#">3</a>
+                    </li>
+                    <li><a href="#">...</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

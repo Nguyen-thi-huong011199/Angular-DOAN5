@@ -1,28 +1,19 @@
 <nav class="navbar-default navbar-fixed-top">
     <div class="container">
-        <a href="#" class="nav-trigger hidden-xs" data-toggle="modal" data-target="#myModal"  [formGroup]="form"  (ngSubmit)="onSubmit()">
-            <select formControlName="type">
+       
+            <select formControlName="type" class="nav-trigger hidden-xs" data-toggle="modal" data-target="#myModal"  [formGroup]="form"  (ngSubmit)="onSubmit()" style="border:none">
                 <option>Chọn ngành</option>
                 <option *ngFor="let item of loaicvs" value="{{item.maloaiCv}}">{{item.tenloaiCv}}</option>
             </select>
-        </a>
+     
         <div class="navbar-header"> <a href="./index.html" class="navbar-brand">365<span>Tìm</span>Việc</a> </div>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li> <a href="index.html">TRANG CHỦ</a> </li>
-                <li class=" dropdown"> <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TẠO HỒ SƠ <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="directory_profile.html">Profile (Booking)</a> </li>
-                        <li><a href="directory_profile_2.html">Profile (Discount Sale)</a> </li>
-                        <li><a href="directory_coupons.html">Profile (Coupons)</a> </li>
-                        <li><a href="directory_search_list.html">Search results list</a> </li>
-                        <li><a href="directory_search.html">Search results grid</a> </li>
-                        <li><a href="faq.html">Faq Page</a> </li>
-                        <li><a href="wizard.html">Form Wizard</a> </li>
-                    </ul>
+                <li class=" dropdown"> <a routerLink="/tao-ho-so">TẠO HỒ SƠ <span class="caret"></span></a>
                 </li>
-                <li> <a href="directory_pricing.html">NHÀ TUYỂN DỤNG</a> </li>
+                <li> <a routerLink="/dang-nhap">NHÀ TUYỂN DỤNG</a> </li>
                 <!-- <li class=" dropdown"> <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Người tìm việc <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="directory_blog.html">Blog</a> </li>

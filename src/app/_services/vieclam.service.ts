@@ -40,4 +40,22 @@ export class ViecLamService {
         return this._http
             .get<any>(baseUrl + id);
     }
+    getTheoLoai(idloai) {
+        return this._http
+            .get<any>(baseUrl + "get-loai/" + idloai, { headers: environment.headerOptions });
+    }
+
+    getTheoId1(id) {
+        return this._http
+            .get<any>(baseUrl + id, { headers: environment.headerOptions });
+    }
+    getTheoLoaiTop4(idloai) {
+        return this._http
+            .get<any>(baseUrl + "get-loai-top4/" + idloai, { headers: environment.headerOptions });
+    }
+    getTheoLoaiTop6(idloai) {
+        return this._http
+            .get<any>(baseUrl + "get-loai-top6/" + idloai, { headers: environment.headerOptions });
+    }
+
 }

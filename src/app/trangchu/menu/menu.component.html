@@ -124,7 +124,6 @@
                                             <span class="item-meta-item"><i class="material-icons"></i>{{item.ngaydang}}</span>
                                             <a href="post.html#comments" class="item-meta-item"><span class="post-views">Lượt xem: {{item.luotxem}}</span></a>
                                     </span>
-                                    <p>{{item.motaCv}}</p>
                                 </div>
                             </div>
                         </div>
@@ -142,12 +141,12 @@
                 <!-- BEGIN .widget -->
                 <div class="widget">
                     <h3>Lượt theo dõi</h3>
-                    <div class="widget-content ot-w-socialize">
-                        <a href="#" class="ot-color-hover-facebook"><span><i>13 956</i> fans</span></a>
-                        <a href="#" class="ot-color-hover-twitter"><span><i>2 042</i> followers</span></a>
-                        <a href="#" class="ot-color-hover-google-plus"><span><i>184</i> followers</span></a>
-                        <a href="#" class="ot-color-hover-youtube"><span><i>502</i> subscribers</span></a>
-                        <a href="#" class="ot-color-hover-rss"><span><i>2 831</i> rss feeders</span></a>
+                    <div  class="widget-content ot-w-socialize">
+                        <a href="#"><span><img style="width:70px;height:70px;" src="assets/images/facebook.jpg" alt="" /><i>13 956</i> likes</span></a>
+                        <a href="#"><span><img style="width:70px;height:70px;" src="assets/images/G+.jpg" alt="" /><i>2 042</i> followers</span></a>
+                        <a href="#"><span><img style="width:70px;height:70px;" src="assets/images/chim.jpg" alt="" /><i>184</i> followers</span></a>
+                        <a href="#"><span><img style="width:70px;height:70px;" src="assets/images/youtube.jpg" alt="" /><i>502</i> subscribers</span></a>
+                        <a href="#"><span><img style="width:70px;height:70px;" src="assets/images/instargram.jpg" alt="" /><i>2 831</i> rss feeders</span></a>
                     </div>
                     <!-- END .widget -->
                 </div>
@@ -155,7 +154,7 @@
                 <!-- BEGIN .widget -->
                 <div class="widget">
                     <div class="widget-content">
-                        <a href="#" target="_blank"><img src="assets/images/o2.jpg" alt="" /></a>
+                        <a href="#" target="_blank"><img src="assets/images/tuyendung1.jpg" alt="" /></a>
                     </div>
                     <!-- END .widget -->
                 </div>
@@ -269,7 +268,7 @@
                                 </div>
                             </div>
                             <div class="listing-info">
-                                <h4 class="li-name"><a href="#">{{item.tenCv}}</a></h4>
+                                <h4 class="li-name"><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h4>
                                 <ul class="list-icon">
                                     <li> <i class="pe-7s-map-marker"></i> {{item.tencongty}}</li>
                                     <li> <i class="pe-7s-call"></i> {{item.diachi}}</li>
