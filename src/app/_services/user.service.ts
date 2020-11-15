@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { User } from '../_model/user';
 
-const baseUrl = environment.apiUrl + "Users/";
+const baseUrl = environment.apiUrl + "Taikhoans/";
 
 @Injectable({
   providedIn: 'root'

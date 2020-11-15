@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
  import { User } from '../_model/user';
 
-const baseUrl = environment.apiUrl + "Users";
+const baseUrl = environment.apiUrl + "Taikhoans";
 
 @Injectable({
   providedIn: 'root'
@@ -33,9 +33,9 @@ export class AuthService {
     }
 
     login(email: string, password: string) {
-        return this._http.post<any>(baseUrl + "/dang-nhap", {
-            Email: email,
-            Password: password
+        return this._http.post<any>(baseUrl + "/login", {
+            username: email,
+            password: password
         }, { headers: environment.headerOptions })
         .pipe(map(data => {
             data.user.token = data.token;
@@ -50,7 +50,7 @@ export class AuthService {
     logout() {
         localStorage.removeItem('user');
         this.userSubject.next(null);
-        this._router.navigate(['/dang-nhap']);
+        this._router.navigate(['/login']);
     }
 
     updateUser(user: User) {
@@ -58,5 +58,10 @@ export class AuthService {
 
         localStorage.setItem('user', JSON.stringify(user));
         this.userSubject.next(user);
+    }
+
+    getAll() {
+        return this._http
+            .get<any[]>(baseUrl, { headers: environment.headerOptions });
     }
 }

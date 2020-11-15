@@ -1,21 +1,21 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <form class="login100-form validate-form">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login100-form validate-form">
                 <span class="login100-form-title p-b-43">
                     Đăng nhập để tiếp tục
                 </span>
                 
                 
                 <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="email">
+                    <input formControlName="username" class="input100" type="text" name="email">
                     <span class="focus-input100"></span>
                     <span class="label-input100">Tên tài khoản</span>
                 </div>
                 
                 
                 <div class="wrap-input100 validate-input" data-validate="Password is required">
-                    <input class="input100" type="password" name="pass">
+                    <input formControlName="password" class="input100" type="password" name="pass">
                     <span class="focus-input100"></span>
                     <span class="label-input100">Mật khẩu</span>
                 </div>
@@ -37,7 +37,7 @@
         
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn">
+                    <button type="submit" class="login100-form-btn">
                         Đăng nhập
                     </button>
                 </div>

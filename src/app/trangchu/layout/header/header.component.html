@@ -23,43 +23,13 @@
                 <li> <a routerLink="/lien-he">LIÊN HỆ</a> </li>
             </ul>
         </div>
-        <div class="header-widget pull-right"> <a routerLink="/dang-ky" class="h-login" data-toggle="modal" data-target="#myModal2" data-tab="login">Đăng ký</a>
-            <ul class="dropdown-menu dropdown-menu-lg">
-                <li class="notifi-title">My Coupons</li>
-                <li class="list-group">
-                    <!-- list item-->
-                    <a href="javascript:void(0);" class="list-group-item">
-                        <div class="media">
-                            <div class="media-left"> <img src="assets/images/cart1.jpg" alt=""> </div>
-                            <div class="media-body clearfix">
-                                <div class="media-heading">Up to 30%</div>
-                                <p class="m-0"> <small>Shopname coupon</small> </p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- list item-->
-                    <a href="javascript:void(0);" class="list-group-item">
-                        <div class="media">
-                            <div class="media-left"> <img src="assets/images/cart2.jpg" alt=""> </div>
-                            <div class="media-body clearfix">
-                                <div class="media-heading">Up to 30%</div>
-                                <p class="m-0"> <small>Shopname coupon</small> </p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- list item-->
-                    <a href="javascript:void(0);" class="list-group-item">
-                        <div class="media">
-                            <div class="media-left"> <img src="assets/images/cart3.jpg" alt=""> </div>
-                            <div class="media-body clearfix">
-                                <div class="media-heading">Up to 30%</div>
-                                <p class="m-0"> <small>Shopname coupon</small> </p>
-                            </div>
-                        </div>
-                    </a>
-                    <!-- last list item -->
-                    <a href="javascript:void(0);" class="list-group-item"> <small>Print all coupons</small> </a>
-                </li>
-            </ul> <a routerLink="/dang-nhap" class="h-login" data-toggle="modal" data-target="#myModal2" data-tab="login">Đăng nhập</a> </div>
+        <div class="header-widget pull-right">
+            <ng-container *ngIf="!user">
+                <a routerLink="/dang-ky" class="h-login" data-toggle="modal" data-target="#myModal2" data-tab="login">Đăng ký</a>
+                <a routerLink="/dang-nhap" class="h-login" data-toggle="modal" data-target="#myModal2" data-tab="login">Đăng nhập</a>
+            </ng-container>
+
+            <a *ngIf="user" (click)="logout()" class="h-login" data-toggle="modal" data-target="#myModal2" data-tab="login">{{user.tenTk}}</a>
+        </div>
     </div>
 </nav>

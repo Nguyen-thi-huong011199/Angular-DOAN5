@@ -12,6 +12,7 @@ import { DangkyComponent } from './dangky/dangky.component';
 import { DangnhapComponent } from './dangnhap/dangnhap.component';
 import { TaohosoComponent } from './taohoso/taohoso.component';
 import { DanhmucloaicvComponent } from './danhmucloaicv/danhmucloaicv.component';
+import { GetImagePipe } from '../_pipe/getimage.pipe';
 
 export const trangchuRoutes: Routes = [
   {
@@ -47,7 +48,16 @@ export const trangchuRoutes: Routes = [
 
 
 @NgModule({
-  declarations: [LienheComponent,  ChitiettinComponent, DanhmucComponent, DangkyComponent, DangnhapComponent, TaohosoComponent, DanhmucloaicvComponent],
+  declarations: [
+    GetImagePipe,
+    LienheComponent,
+    ChitiettinComponent,
+    DanhmucComponent,
+    DangkyComponent,
+    DangnhapComponent,
+    TaohosoComponent,
+    DanhmucloaicvComponent
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
