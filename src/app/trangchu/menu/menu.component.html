@@ -36,7 +36,7 @@
                                     <div class="item" *ngFor="let item of loaicvtype1">
                                         <div class="item-header">
                                             <a href="#" class="img-read-later-button rm-btn-small">Viêc làm mới</a>
-                                            <a [routerLink]="['chi-tiet-tin', item.maCv]"><img src="http://localhost:60240/Uploads/images/{{item.anh}}" alt=""/></a>
+                                            <a [routerLink]="['chi-tiet-tin', item.maCv]"><img style="width:250px;height:170px;" src="http://localhost:60240/Uploads/images/{{item.anh}}" alt=""/></a>
                                         </div>
                                         <div class="item-content">
                                             <h2><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h2>
@@ -77,7 +77,7 @@
                                 <div class="item" *ngFor="let item of loaicvtype2">
                                     <div class="item-header">
                                         <a href="#" class="img-read-later-button">Viêc làm mới</a>
-                                        <a [routerLink]="['chi-tiet-tin', item.maCv]"><img src="http://localhost:60240/Uploads/images/{{item.anh}}" alt="" /></a>
+                                        <a [routerLink]="['chi-tiet-tin', item.maCv]"><img style="width:250px;height:170px;" src="http://localhost:60240/Uploads/images/{{item.anh}}" alt="" /></a>
                                     </div>
                                     <div class="item-content">
                                         <h2><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h2>
@@ -113,7 +113,7 @@
                             <div class="item" *ngFor="let item of loaicvtype3">
                                 <div class="item-header">
                                     <a href="#" class="img-read-later-button">Viêc làm mới</a>
-                                    <a [routerLink]="['chi-tiet-tin', item.maCv]"><img src="http://localhost:60240/Uploads/images/{{item.anh}}" alt="" /></a>
+                                    <a [routerLink]="['chi-tiet-tin', item.maCv]"><img style="width:250px;height:170px;" src="http://localhost:60240/Uploads/images/{{item.anh}}" alt="" /></a>
                                 </div>
                                 <div class="item-content">
                                     <h2><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h2>
@@ -164,57 +164,22 @@
                     <h3>Việc làm hot</h3>
                     <div class="widget-content ot-w-article-list">
 
-                        <div class="item">
+                        <div class="item" *ngFor="let item of loaicvtype5">
                             <div class="item-header">
                                 <a href="#" class="img-read-later-button rm-btn-small">Viêc làm mới</a>
-                                <a href="post.html"><img src="assets/images/photos/image-17.jpg" alt="" /></a>
+                                <a href="post.html"><img style="width:90px;height:60px;" src="http://localhost:60240/Uploads/images/{{item.anh}}" alt="" /></a>
                             </div>
                             <div class="item-content">
-                                <h4><a href="post.html">3 Generations Of Young Skywalkers Is The Path To So Many Feels</a></h4>
+                                <h4><a [routerLink]="['chi-tiet-tin', item.maCv]">{{item.tenCv}}</a></h4>
+                                <h4 style="font-weight: 300;">{{item.tencongty}}</h4>
+                                    <h4 style="font-weight: 300;">{{item.diachi}}</h4>
                                 <span class="item-meta">
-                                        <span class="item-meta-item"><i class="material-icons">access_time</i>January 12, 2015</span>
+                                        <span class="item-meta-item"><i class="material-icons">access_time</i>{{item.ngaydang}}</span>
                                 </span>
                             </div>
                         </div>
 
-                        <div class="item">
-                            <div class="item-header">
-                                <a href="#" class="img-read-later-button rm-btn-small">Viêc làm mới</a>
-                                <a href="post.html"><img src="assets/images/photos/image-18.jpg" alt="" /></a>
-                            </div>
-                            <div class="item-content">
-                                <h4><a href="post.html">Meet DC's Legends of Tomorrow: Vandal Savage</a></h4>
-                                <span class="item-meta">
-                                        <span class="item-meta-item"><i class="material-icons">access_time</i>January 12, 2015</span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="item-header">
-                                <a href="#" class="img-read-later-button rm-btn-small">Viêc làm mới</a>
-                                <a href="post.html"><img src="assets/images/photos/image-19.jpg" alt="" /></a>
-                            </div>
-                            <div class="item-content">
-                                <h4><a href="post.html">YOU DECIDE: The Best Movie of 2015 - Final Four!</a></h4>
-                                <span class="item-meta">
-                                        <span class="item-meta-item"><i class="material-icons">access_time</i>January 12, 2015</span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="item-header">
-                                <a href="#" class="img-read-later-button rm-btn-small">Viêc làm mới</a>
-                                <a href="post.html"><img src="assets/images/photos/image-20.jpg" alt="" /></a>
-                            </div>
-                            <div class="item-content">
-                                <h4><a href="post.html">How Our Favorite Disney Characters Would look In Classic Paintings</a></h4>
-                                <span class="item-meta">
-                                        <span class="item-meta-item"><i class="material-icons">access_time</i>January 12, 2015</span>
-                                </span>
-                            </div>
-                        </div>
+                       
 
                     </div>
                     <!-- END .widget -->
@@ -258,7 +223,9 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6" *ngFor="let item of loaicvtype4">
                         <div class="listing mob-space30" >
-                            <div class="listing-img bg-image" style="background: url('http://localhost:60240/Uploads/images/{{item.anh}}') center center / cover no-repeat;">
+                            <div class="listing-img bg-image">
+                                <a href="#" class="img-read-later-button">Viêc làm mới</a>
+                                <a [routerLink]="['chi-tiet-tin', item.maCv]"><img style="width:350px;height:200px;" src="http://localhost:60240/Uploads/images/{{item.anh}}" alt="" /></a>
                                 <div class="li-overlay">
                                     <div class="li-overlay-inner">
                                         <a href="#" class="mail"></a>
